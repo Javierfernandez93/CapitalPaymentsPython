@@ -17,9 +17,9 @@ All examples are available into examples/ folder.
 
 from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
-response = sdk.login();
+response = sdk.login()
 
 ```
 
@@ -27,12 +27,12 @@ response = sdk.login();
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # get the environment : response >= int $sandobox (0 or 1)
-response = sdk.getEnvironment();
+response = sdk.getEnvironment()
 
 ```
 
@@ -40,12 +40,12 @@ response = sdk.getEnvironment();
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # get the account data
-response = sdk.getAccount();
+response = sdk.getAccount()
 
 ```
 
@@ -53,12 +53,12 @@ response = sdk.getAccount();
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # get the balance from the api
-response = sdk.getBalance();
+response = sdk.getBalance()
 
 ```
 
@@ -66,12 +66,12 @@ response = sdk.getBalance();
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # get main wallet data (private key is included)
-response = sdk.getMainWallet();
+response = sdk.getMainWallet()
 
 ```
 
@@ -79,22 +79,38 @@ response = sdk.getMainWallet();
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # retrives all wallets attached to api 
-response = sdk.getWallets();
+response = sdk.getWallets()
+
+```
+# Create invoice
 
 ```
 
+from sdk import SDK
+
+sdk = SDK('api_key','api_secret')
+
+# get the invoice status
+response = sdk.createInvoice({
+    'invoice_id' => 'invoice_id' # string 
+    'amount' => 'amount' # float|int 
+    'whatsApp' => 'whatsApp' # (optional) int whatsapp full number
+    'name' => 'customer_name' #  (optional) string customer's name
+})
+
+```
 # Get invoice status
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # get the invoice status
 response = sdk.getInvoiceStatus({
@@ -107,9 +123,9 @@ response = sdk.getInvoiceStatus({
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # get the invoice status
 response = sdk.cancelInvoice({
@@ -122,11 +138,11 @@ response = sdk.cancelInvoice({
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
-# get the invoice status
+# get the payout data
 response = sdk.createPayout({
     'payout_id' => 'payout_id' # string 
     'amount' => 'amount' # float|int 
@@ -138,9 +154,9 @@ response = sdk.createPayout({
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # get the payout status
 response = sdk.getPayoutStatus({
@@ -153,9 +169,9 @@ response = sdk.getPayoutStatus({
 
 ```
 
-from sdk  SDK
+from sdk import SDK
 
-sdk = SDK('api_key','api_secret');
+sdk = SDK('api_key','api_secret')
 
 # cancel payout  
 response = sdk.cancelPayout({
