@@ -1,1 +1,1 @@
-from sdk import SDK
+from .capitalpaymentscore import SDK
