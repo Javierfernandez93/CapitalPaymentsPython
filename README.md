@@ -357,7 +357,6 @@ response = sdk.setTestInvoiceAsPayed({
 })
 
 ```
-```
 
 # set deposit wallet
 
