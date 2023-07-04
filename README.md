@@ -342,3 +342,34 @@ response = sdk.getCustomer({
     'customer_id' : 'customer_id', # @string
 })
 ```
+
+# set test invoice as payed
+
+```
+
+from sdk import SDK
+
+sdk = SDK('api_key','api_secret')
+
+# requires invoice_id
+response = sdk.setTestInvoiceAsPayed({
+    'invoice_id' : 'invoice_id'
+})
+
+```
+```
+
+# set deposit wallet
+
+```
+
+from sdk import SDK
+
+sdk = SDK('api_key','api_secret')
+
+# requires tron wallet address 
+response = sdk.setDepositWallet({
+    'address' : 'TTCkwzmTZHjN4VSVRVz7s1h5btjWGfvnF9'
+})
+
+```
